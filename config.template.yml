@@ -1,0 +1,6 @@
+development:
+  password:
+  theme_id: "79128363043"
+  store: https://julienbraflan.myshopify.com
+  ignore_files:
+    - config/settings_data.json
