@@ -1,0 +1,74 @@
+<hr>
+<div id="section-cta">
+  <div class="container">
+    <h3> {{ section.settings.text-box }} </h3>
+    <a href="{{ section.settings.link }}"><button class="button" style="background-color:{{ section.settings.color }}; width:{{ section.settings.tailleBouton }}px;">{{ section.settings.linktext }}</button></a>
+  </div>
+</div>
+<hr>
+
+<style>
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Call to action",
+  "settings": [
+    {
+      "id": "text-box",
+      "type": "text",
+      "label": "Heading",
+      "default": "Title"
+    },
+    {
+      "id": "link",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "linktext",
+      "type": "text",
+      "label": "Button text",
+      "default": "Click here"
+    },
+    {
+      "id": "color",
+      "type": "color",
+      "label": "color",
+      "default": "#e81313"
+    },
+    {
+      "id": "tailleBouton",
+      "type": "range",
+      "label": "taille",
+      "default": 100,
+      "min": 50,
+      "max": 200,
+      "step": 10
+    }
+
+  ]
+  ,
+  "presets": [
+    {
+      "name": "button",
+      "category": "button"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
