@@ -1,0 +1,45 @@
+
+
+{% for link in linklists[section.settings.menujb].links %}
+  <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+{% endfor %}
+<div  class="image"><img src="{{ section.settings.image | img_url:'250x250' }}"></div> 
+
+<style>
+
+.image {
+text-align:center;
+}
+</style>
+
+
+{% schema %}
+{
+  "name" : "Name IIM",
+  "settings": [
+{
+   "type": "link_list",
+   "id":  "menujb",
+   "label":  "Menu"
+},
+{
+      "id": "image",
+      "type": "image_picker",
+      "label": "Image"
+}
+  ]
+  ,
+  "presets": [
+    {
+      "name": "Menu",
+      "category": "cours iim"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
